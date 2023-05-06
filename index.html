@@ -1,51 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <article>
+          <section class="mobile-card">
+            <div class="mc-container">
+              <div class="mobile-back-card">
+                <div class="mobile-card-back-img">
+                  <img src="images/bg-card-back.png" alt="" />
+                </div>
+                <p class="mobile-cvr clr-neutral-200">000</p>
+              </div>
+              <div class="mobile-card-front">
+                <div class="mobile-card-front-img">
+                  <img src="images/bg-card-front.png" alt="" />
+                </div>
+                <div class="mobile-card-details">
+                  <div class="mobile-card-logo">
+                    <img src="images/card-logo.svg" alt="" />
+                  </div>
+                  <div>
+                    <p>0000 0000 0000 0000</p>
+                    <div>
+                      <p>JANE APPLESEED</p>
+                      <p>00/00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
-  000
+          <section class="desktop-card">
+            <div class="desktop-back-card">
+              <img src="images/bg-main-desktop.png" alt="" /><img
+                src="images/bg-card-back.png"
+                alt=""
+              />
+              <p class="desktop-cvr">000</p>
+            </div>
+            <div class="desktop-card-front">
+              <img src="images/bg-card-front.png" alt="" />
+              <div class="desktop-card-details">
+                <div class="desktop-card-logo">
+                  <img src="images/card-logo.svg" alt="" />
+                </div>
+                <div>
+                  <p>0000 0000 0000 0000</p>
+                  <div>
+                    <p>JANE APPLESEED</p>
+                    <p>00/00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article>
+          <fieldset>
+            <form action="post">
+              <label for="card-name">CARDHOLDER NAME</label>
+              <input
+                type="text"
+                name="card Name"
+                id="card-name"
+                placeholder="e.g. Jane Appleseed"
+              />
 
-  Cardholder Name
-  e.g. Jane Appleseed
+              <label for="card-number">CARD NUMBER</label>
+              <input
+                type="number"
+                name="card Number"
+                id="card-number"
+                placeholder="e.g. 1234 5678 9123 0000"
+                maxlength="16"
+              />
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+              <label for="exp-date">EXP. DATE (MM/YY)</label>
+              <input
+                type="number"
+                name="expiry date"
+                id="exp-date"
+                placeholder="MM"
+                min="1"
+                max="12"
+              />
+              <input
+                type="number"
+                name="expiry date"
+                id="exp-date"
+                placeholder="YY"
+                maxlength="4"
+                minlength="4"
+              />
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+              <label for="cvc">CVC</label>
+              <input
+                type="number"
+                name="CVC"
+                id="cvc"
+                placeholder="e.g. 123"
+                maxlength="3"
+              />
 
-  CVC
-  e.g. 123
+              <button type="submit">Confirm</button>
+            </form>
+          </fieldset>
+        </article>
+      </div>
+      Jane Appleseed 00/00 Cardholder Name e.g. Jane Appleseed Card Number Exp.
+      Date (MM/YY) MM YY CVC e.g. 123 Confirm
 
-  Confirm
+      <!-- Completed state start -->
 
-  <!-- Completed state start -->
+      Thank you! We've added your card details Continue
+    </main>
 
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Ibenwankwo Emmanuel</a>.
+    </div>
+  </body>
+  <script src="main.js"></script>
 </html>
