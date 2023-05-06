@@ -131,6 +131,18 @@ input:focus-within {
   border-color: var(--clr-primary-gradient);
 }
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /* general styling */
 
 .desktop-card {
@@ -140,7 +152,10 @@ input:focus-within {
 .mobile-card {
   background-image: url(images/bg-main-mobile.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  /* bac */
+  max-width: 25rem;
+  margin: auto;
   /* max-width: 43.4375rem; */
   /* position: relative; */
 }
@@ -152,14 +167,14 @@ input:focus-within {
 
 .mobile-back-card {
   position: relative;
-  max-width: 18rem;
+  max-width: 16rem;
   left: 2rem;
   top: 3rem;
 }
 
 .mobile-card-front {
   position: relative;
-  max-width: 18rem;
+  max-width: 16rem;
   right: 2rem;
   bottom: 1.3rem;
 }
@@ -169,6 +184,18 @@ input:focus-within {
   z-index: 100;
   top: 4.1rem;
   right: 2.3rem;
+}
+
+.mobile-card-front img {
+  position: relative;
+}
+
+.mobile-card-details {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
 }
 
 @media (min-width: 50em) {
