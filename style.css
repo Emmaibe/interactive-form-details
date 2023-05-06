@@ -10,7 +10,8 @@
   --clr-neutral-300: hsl(279, 6%, 55%);
   --clr-neutral-400: hsl(278, 68%, 11%);
 
-  --fs-100: 1rem;
+  --fs-100: 0.875rem;
+  --fs-200: 1rem;
   --fs-200: 1.125rem;
   --fs-300: 1.25rem;
 }
@@ -141,6 +142,7 @@ input:focus-within {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 0.6rem;
 }
 
 /* general styling */
@@ -153,36 +155,33 @@ input:focus-within {
   background-image: url(images/bg-main-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
-  /* bac */
-  max-width: 25rem;
-  margin: auto;
-  /* max-width: 43.4375rem; */
+  max-height: 15rem;
   /* position: relative; */
 }
 
 .mc-container {
-  max-width: 20rem;
+  max-width: 17.5rem;
   margin: auto;
 }
 
 .mobile-back-card {
   position: relative;
-  max-width: 16rem;
+  max-width: 18rem;
   left: 2rem;
-  top: 3rem;
+  top: 2rem;
 }
 
 .mobile-card-front {
   position: relative;
-  max-width: 16rem;
+  max-width: 18rem;
   right: 2rem;
-  bottom: 1.3rem;
+  bottom: 2.3rem;
 }
 
 .mobile-cvr {
   position: absolute;
   z-index: 100;
-  top: 4.1rem;
+  top: 3.95rem;
   right: 2.3rem;
 }
 
@@ -190,12 +189,18 @@ input:focus-within {
   position: relative;
 }
 
+.mobile-card-logo {
+  max-width: 3rem;
+}
+
 .mobile-card-details {
+  inset: 0;
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   top: 0;
+  padding: 1rem;
 }
 
 @media (min-width: 50em) {
