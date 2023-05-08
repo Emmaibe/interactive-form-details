@@ -124,7 +124,13 @@ fieldset {
   font-size: var(--fs-300);
 }
 
-input:invalid {
+input {
+  border: 2px solid var(--clr-neutral-200);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+input:focus:invalid {
   border-color: var(--clr-primary-100);
 }
 
@@ -145,6 +151,17 @@ input:focus-within {
   gap: 0.6rem;
 }
 
+.gap {
+  gap: 0.5rem;
+}
+
+.input-flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.3rem;
+}
+
 /* general styling */
 
 .desktop-card {
@@ -160,7 +177,7 @@ input:focus-within {
 }
 
 .mc-container {
-  max-width: 17.5rem;
+  max-width: 18.5rem;
   margin: auto;
 }
 
@@ -181,7 +198,7 @@ input:focus-within {
 .mobile-cvr {
   position: absolute;
   z-index: 100;
-  top: 3.95rem;
+  top: 4.1rem;
   right: 2.3rem;
 }
 
@@ -201,6 +218,34 @@ input:focus-within {
   justify-content: space-between;
   top: 0;
   padding: 1rem;
+}
+
+fieldset {
+  max-width: 22.5rem;
+  margin: auto;
+  margin-top: 4rem;
+  font-size: var(--fs-100);
+}
+
+.fieldset-form {
+  gap: 1rem;
+}
+
+button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0 2rem 0;
+}
+
+.grid-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem;
+}
+
+.exp-cvc div,
+.exp-cvc > input {
+  margin-top: 0.3rem;
 }
 
 @media (min-width: 50em) {

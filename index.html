@@ -34,7 +34,7 @@
   </head>
   <body>
     <main>
-      <div class="container">
+      <div class="container flex-column">
         <article>
           <section class="mobile-card">
             <div class="mc-container">
@@ -93,62 +93,72 @@
         </article>
         <article>
           <fieldset>
-            <form action="post">
-              <label for="card-name">CARDHOLDER NAME</label>
-              <input
-                type="text"
-                name="card Name"
-                id="card-name"
-                placeholder="e.g. Jane Appleseed"
-              />
+            <form action="post" class="fieldset-form flex-column">
+              <div class="input-flex-column">
+                <label for="card-name">CARDHOLDER NAME</label>
+                <input
+                  type="text"
+                  name="card Name"
+                  id="card-name"
+                  placeholder="e.g. Jane Appleseed"
+                />
+              </div>
 
-              <label for="card-number">CARD NUMBER</label>
-              <input
-                type="number"
-                name="card Number"
-                id="card-number"
-                placeholder="e.g. 1234 5678 9123 0000"
-                maxlength="16"
-              />
+              <div class="input-flex-column">
+                <label for="card-number">CARD NUMBER</label>
+                <input
+                  type="number"
+                  name="card Number"
+                  id="card-number"
+                  placeholder="e.g. 1234 5678 9123 0000"
+                  maxlength="16"
+                />
+              </div>
+              <div class="grid-col">
+                <div class="exp-cvc">
+                  <label for="exp-date">EXP. DATE (MM/YY)</label>
+                  <div class="grid-col">
+                    <input
+                      type="number"
+                      name="expiry date"
+                      id="exp-date"
+                      placeholder="MM"
+                      min="1"
+                      max="12"
+                    />
+                    <input
+                      type="number"
+                      name="expiry date"
+                      id="exp-date"
+                      placeholder="YY"
+                      min="00"
+                      max="99"
+                    />
+                  </div>
+                </div>
+                <div class="exp-cvc">
+                  <label for="cvc">CVC</label><br />
+                  <input
+                    type="number"
+                    name="CVC"
+                    id="cvc"
+                    placeholder="e.g. 123"
+                    maxlength="3"
+                  />
+                </div>
+              </div>
 
-              <label for="exp-date">EXP. DATE (MM/YY)</label>
-              <input
-                type="number"
-                name="expiry date"
-                id="exp-date"
-                placeholder="MM"
-                min="1"
-                max="12"
-              />
-              <input
-                type="number"
-                name="expiry date"
-                id="exp-date"
-                placeholder="YY"
-                maxlength="4"
-                minlength="4"
-              />
-
-              <label for="cvc">CVC</label>
-              <input
-                type="number"
-                name="CVC"
-                id="cvc"
-                placeholder="e.g. 123"
-                maxlength="3"
-              />
-
-              <button type="submit">Confirm</button>
+              <button type="submit" class="bg-clr-neutral-400 clr-neutral-100">
+                Confirm
+              </button>
             </form>
           </fieldset>
         </article>
       </div>
-      Jane Appleseed 00/00 Cardholder Name e.g. Jane Appleseed Card Number Exp.
-      Date (MM/YY) MM YY CVC e.g. 123 Confirm
 
       <!-- Completed state start -->
 
-      Thank you! We've added your card details Continue
+      <!-- Thank you! We've added your card details Continue -->
     </main>
 
     <div class="attribution">
