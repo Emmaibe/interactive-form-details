@@ -86,6 +86,11 @@ fieldset {
   border: none;
 }
 
+p {
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+}
+
 /* utility classes */
 
 .clr-neutral-100 {
